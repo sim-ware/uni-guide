@@ -5,7 +5,7 @@ import {
 
 
 describe("test getRatioByInstitutionAndYear()", () => {
-  it("should return Submission matching input Institution ID and Year", () => {
+  it("should return Ratio of Students to Staff of Submission matching the input Institution ID and Year", () => {
     expect(getRatioByInstitutionAndYear("EA8BBED7-4106-94AF-48DD-A1414E386AFB", 2017))
       .toStrictEqual({
         "id": "8F4B12A9-4D4C-C7FB-F9EC-EBDF75AB3933",

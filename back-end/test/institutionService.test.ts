@@ -1,6 +1,6 @@
 import { getAllIdNameAndYearRanges } from "../src/institutionService"
 
-describe("test add function", () => {
+describe("test getAllIdNameAndYearRanges()", () => {
   it("should return an Array of Ids of all Institutions", () => {
     expect(getAllIdNameAndYearRanges()).toStrictEqual(
       [
