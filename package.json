@@ -1,0 +1,19 @@
+{
+  "name": "uni-guide",
+  "version": "1.0.0",
+  "description": "A simple React app to show University data",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sim-ware/uni-guide.git"
+  },
+  "author": "sim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sim-ware/uni-guide/issues"
+  },
+  "homepage": "https://github.com/sim-ware/uni-guide#readme"
+}
