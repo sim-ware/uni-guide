@@ -1,8 +1,11 @@
 import institutions from '../db/institutions.json'
 import { InstitutionIdAndNameList } from '../db/interfaces'
+import { getAllAvailableSubmissionYearsPerInstitution } from './submissionService'
 
-export function getAllInstitutionIdAndNames(): InstitutionIdAndNameList[] {
+export function getAllIdNameAndYearRanges(): InstitutionIdAndNameList[] {
   return institutions.map(i => {
-    return { id: i.id, name: i.name }
+    const yearRange = getAllAvailableSubmissionYearsPerInstitution(i.id)
+    
+    return { id: i.id, name: i.name, yearRange }
   })
 }
