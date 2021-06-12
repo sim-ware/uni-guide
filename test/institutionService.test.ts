@@ -1,7 +1,7 @@
 import { getAllInstitutionIds } from "../src/institutionService"
 
 describe("test add function", () => {
-  it("should return an Array of Ids of all Institutions in institutions.json", () => {
+  it("should return an Array of Ids of all Institutions", () => {
     expect(getAllInstitutionIds()).toStrictEqual(
       [
         "EA8BBED7-4106-94AF-48DD-A1414E386AFB",
