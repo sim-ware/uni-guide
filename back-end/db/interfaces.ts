@@ -15,3 +15,8 @@ export interface Submission {
     student_rating: number;
   }[]
 }
+
+export interface InstitutionIdAndNameList {
+  id: string;
+  name: string;
+}
