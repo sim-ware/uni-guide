@@ -7,9 +7,18 @@ export function getAllAvailableSubmissionYearsPerInstitution(id: string): number
     .map(sub => sub.year)
 }
 
-export function getSubmissionByInstitutionAndYear(id: string, year: number): Submission {
-  return submissions
+export function getRatioByInstitutionAndYear(id: string, year: number): Submission {
+  const submissionByIdAndYear = submissions
     .filter(sub => sub.institution_id === id)
     .filter(sub => sub.year === year)
     [0]
+  
+  const ratio = Math.round(
+    submissionByIdAndYear.students_total / submissionByIdAndYear.staff_total
+  )
+
+  return {
+    id: submissionByIdAndYear.id,
+    ratio,
+  }
 }
