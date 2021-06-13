@@ -14,13 +14,13 @@
 }
 
 .Filter-list-container {
-  background-color: yellow;
+  background-color: gainsboro;
   height: 90vh;
   width: 35%;
 }
 
 .Visual-data-container {
-  background-color: red;
+  background-color: aquamarine;
   height: 90vh;
   width: 55%;
 }
