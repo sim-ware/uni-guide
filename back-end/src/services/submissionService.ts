@@ -13,12 +13,15 @@ export function getRatioByInstitutionAndYear(id: string, year: number): Submissi
     .filter(sub => sub.year === year)
     [0]
   
+  const { students_total: studentsTotal, staff_total: staffTotal } = submissionByIdAndYear
   const ratio = Math.round(
-    submissionByIdAndYear.students_total / submissionByIdAndYear.staff_total
+    studentsTotal / staffTotal
   )
 
   return {
     id: submissionByIdAndYear.id,
     ratio,
+    staffTotal,
+    studentsTotal,
   }
 }
