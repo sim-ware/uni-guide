@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import FilterList from './components/FilterList/FilterList'
-import { PieChart, Pie } from "recharts";
-
-
-const data = [
-  { name: "Staff", value: 400 },
-  { name: "Students", value: 300 },
-];
+import ChartArea from './components/ChartArea/ChartArea'
 
 
 function App() {
@@ -43,26 +37,11 @@ function App() {
 
         <div className="Visual-data-container">
           <p>Chart Area</p>
-          {!university || !year ? 
-          <p>Please select a University and then Year</p> : 
-          (<div>
-            <p>{university}</p>
-            <p>{year}</p>
-            <p>{JSON.stringify(chartInfo)}</p>
-            <PieChart width={400} height={400}>
-              <Pie
-                dataKey="value"
-                startAngle={180}
-                endAngle={0}
-                data={data}
-                cx={200}
-                cy={200}
-                outerRadius={80}
-                fill="#8884d8"
-                label
-              />
-            </PieChart>
-          </div>)}
+
+          {chartInfo && (!university || !year) ? 
+          <p>Please select a University and then Year</p> :
+          <ChartArea chartInfo={chartInfo}/>}
+
         </div>
 
       </header>

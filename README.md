@@ -13,11 +13,18 @@ At this point I was a bit short on time, so instead of inserting the `back-end` 
 Unsure of how best to calculate this, Google pointed me towards a PDF containing the following (https://www.oecd-ilibrary.org/docserver/a1ef3bfe-en.pdf?expires=1623523184&id=id&accname=guest&checksum=08D420F9DA186A31BBCDC7C7612F24AE):
 `The student-teacher ratio is calculated by dividing the number of full-time equivalent students by the number of full-time equivalent teachers at a given level of education and type of institution.`
 
-With more time, I would have liked to tie the two functions `getAllIdNameAndYearRanges` & `getRatioByInstitutionAndYear` into endpoints in a simple express server, for the React FrontEnd to be able to call. With this Data I would then try to develop the dropdown menus and add a simple Pie Chart using ReCharts or something similar: https://github.com/recharts/recharts.
+I then tied the two functions `getAllIdNameAndYearRanges` & `getRatioByInstitutionAndYear` into endpoints in a simple express server, for the React FrontEnd to be able to call. With this Data I would then try to developed the dropdown menus quickly using Material UI, and added a simple Pie Chart using ReCharts: https://github.com/recharts/recharts.
+
+## To Run
+The following commands are useful to run/test parts of the stack in isolation. To run it altogether, in separate terminal windows, run the below commands to 'Run BackEnd' and 'Run FrontEnd', being sure that in the separate terminal windows used to run each process, you have changed into the correct `front-end` or `back-end` directory.
 
 ### To Test BackEnd
 `cd back-end`
 `npm test`
+
+### To Run BackEnd
+`cd back-end`
+`npm start`
 
 ### To Run FrontEnd
 `cd front-end`
