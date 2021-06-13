@@ -38,8 +38,9 @@ function App() {
         <div className="Visual-data-container">
           <p>Chart Area</p>
 
-          {chartInfo && (!university || !year) ? 
+          {!university || !year  || !chartInfo ? 
           <p>Please select a University and then Year</p> :
+          // @ts-ignore 
           <ChartArea chartInfo={chartInfo}/>}
 
         </div>
