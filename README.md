@@ -19,13 +19,19 @@ I then tied the two functions `getAllIdNameAndYearRanges` & `getRatioByInstituti
 The following commands are useful to run/test parts of the stack in isolation. To run it altogether, in separate terminal windows, run the below commands to 'Run BackEnd' and 'Run FrontEnd', being sure that in the separate terminal windows used to run each process, you have changed into the correct `front-end` or `back-end` directory.
 
 ### To Test BackEnd
-`cd back-end`
-`npm test`
+```
+$ cd back-end
+$ npm test
+```
 
 ### To Run BackEnd
-`cd back-end`
-`npm start`
+```
+$ cd back-end
+$ npm start
+```
 
 ### To Run FrontEnd
-`cd front-end`
-`npm start`
+```
+$ cd front-end
+$ npm start
+```
