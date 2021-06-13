@@ -2,7 +2,14 @@ import '../../App.css';
 import { PieChart, Pie } from "recharts";
 
 
-function ChartArea(props: any) {
+function ChartArea(
+  props: { 
+    chartInfo: {
+      ratio: number, 
+      staffTotal: number, 
+      studentsTotal: number
+    } 
+  }) {
   return (
     <div>
       <p>{props.chartInfo.ratio}</p>

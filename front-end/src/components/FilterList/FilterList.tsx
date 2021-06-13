@@ -14,7 +14,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function FilterList(props: any) {
+function FilterList(
+  props: {
+    onYearChangeHandler: Function,
+    onUniversityChangeHandler: Function
+  }
+  ) {
   const classes = useStyles();
   const [filters, setFilters] = useState([]);
   const [university, setUniversity] = useState('');
@@ -28,7 +33,7 @@ function FilterList(props: any) {
 
   const handleUniversityChange = (event: any) => {
     setUniversity(event.target.value);
-    props.onUniversityChange(event.target.value);
+    props.onUniversityChangeHandler(event.target.value);
   };
 
   const handleYearChange = (event: any) => {
@@ -41,7 +46,9 @@ function FilterList(props: any) {
       <FormControl className={classes.formControl}>
         <InputLabel>University</InputLabel>
         <Select value={university} onChange={handleUniversityChange}>
-          {filters.map((filter: any) => {
+          {filters.map((
+            filter: { id: string, name: string }
+            ) => {
             return <MenuItem value={filter.id}>{filter.name}</MenuItem>;
           })}
         </Select>
@@ -50,7 +57,7 @@ function FilterList(props: any) {
   }
 
   const YearDropdown = () => {
-    const options: number[] = filters.filter((uni: any) => uni.id === university)[0]['yearRange']
+    const options: number[] = filters.filter((uni: { id: string }) => uni.id === university)[0]['yearRange']
 
     return (
       <FormControl className={classes.formControl}>

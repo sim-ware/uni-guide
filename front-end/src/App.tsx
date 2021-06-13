@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import FilterList from './components/FilterList/FilterList'
-import ChartArea from './components/ChartArea/ChartArea'
+import FilterList from './components/FilterList/FilterList';
+import ChartArea from './components/ChartArea/ChartArea';
 
 
 function App() {
-  const [university, setUniversity] = useState(null);
-  const [year, setYear] = useState(null);
+  const [university, setUniversity] = useState('');
+  const [year, setYear] = useState(0);
   const [chartInfo, setChartInfo] = useState(null);
 
   useEffect(() => {
@@ -18,12 +18,12 @@ function App() {
     
   },[year, university])
 
-  const onUniversityChangeHandler = (data: any) => {
-    setUniversity(data)
+  const onUniversityChangeHandler = (university: string) => {
+    setUniversity(university)
   }
   
-  const onYearChangeHandler = (data: any) => {
-    setYear(data)
+  const onYearChangeHandler = (year: number) => {
+    setYear(year)
   }
 
   return (
@@ -31,7 +31,7 @@ function App() {
       <header className="App-header">
 
         <FilterList 
-          onUniversityChange={onUniversityChangeHandler}
+          onUniversityChangeHandler={onUniversityChangeHandler}
           onYearChangeHandler={onYearChangeHandler}
         />
 
