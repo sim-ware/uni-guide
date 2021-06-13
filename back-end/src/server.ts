@@ -1,9 +1,12 @@
 import express from 'express';
+import cors from 'cors';
 import { getAllIdNameAndYearRanges } from './services/institutionService'
 import { getRatioByInstitutionAndYear } from './services/submissionService'
 const app = express();
 const PORT = 8000;
 
+
+app.use(cors());
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
