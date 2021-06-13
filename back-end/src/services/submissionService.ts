@@ -1,5 +1,5 @@
-import submissions from '../db/submissions.json'
-import { Submission } from '../db/interfaces'
+import submissions from '../../db/submissions.json'
+import { Submission } from '../../db/interfaces'
 
 export function getAllAvailableSubmissionYearsPerInstitution(id: string): number[] {
   return submissions

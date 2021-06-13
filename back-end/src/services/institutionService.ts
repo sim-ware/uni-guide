@@ -1,5 +1,5 @@
-import institutions from '../db/institutions.json'
-import { InstitutionIdAndNameList } from '../db/interfaces'
+import institutions from '../../db/institutions.json'
+import { InstitutionIdAndNameList } from '../../db/interfaces'
 import { getAllAvailableSubmissionYearsPerInstitution } from './submissionService'
 
 export function getAllIdNameAndYearRanges(): InstitutionIdAndNameList[] {

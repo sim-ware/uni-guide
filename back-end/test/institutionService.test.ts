@@ -1,4 +1,4 @@
-import { getAllIdNameAndYearRanges } from "../src/institutionService"
+import { getAllIdNameAndYearRanges } from "../src/services/institutionService"
 
 describe("test getAllIdNameAndYearRanges()", () => {
   it("should return an Array of Ids of all Institutions", () => {

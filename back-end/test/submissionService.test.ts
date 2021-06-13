@@ -1,7 +1,7 @@
 import { 
   getRatioByInstitutionAndYear,
   getAllAvailableSubmissionYearsPerInstitution
-} from "../src/submissionService"
+} from "../src/services/submissionService"
 
 
 describe("test getRatioByInstitutionAndYear()", () => {
